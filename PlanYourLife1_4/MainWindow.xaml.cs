@@ -32,5 +32,10 @@ namespace PlanYourLife1_4
             AddNewEvent addNewEventWindow = new AddNewEvent();
             addNewEventWindow.Show();
         }
+        private void MenuItemUpdata_Click(object sender, RoutedEventArgs e)
+        {
+            Plans updataPlans = new Plans();
+            this.DataGridPlanYourLife.ItemsSource = updataPlans.plans;
+        }
     }
 }

@@ -26,7 +26,8 @@
 
         </DataGrid>
         <Menu HorizontalAlignment="Left" Height="24" VerticalAlignment="Top"  >
-            <MenuItem Header="Add" Click="MenuItemAdd_Click"/>
+            <MenuItem Header="Додати нову подію" Click="MenuItemAdd_Click"/>
+            <MenuItem Header="Оновити" Click="MenuItemUpdata_Click"/>
         </Menu>
 
     </Grid>

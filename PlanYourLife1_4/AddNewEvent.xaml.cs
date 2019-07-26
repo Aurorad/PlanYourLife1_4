@@ -25,10 +25,20 @@ namespace PlanYourLife1_4
         }
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
-            //MessageBox.Show("Here we should save new event to the database!");
-            DateTime date = Convert.ToDateTime(this.DateOfNewEvent.DataContext);
-            string text = this.TextOfNewEvent.ToString();
-            MessageBox.Show("Date: " + date.ToString() + "\nText: " + text);
+            try
+            {
+                DateTime date = this.DateOfNewEvent.SelectedDate.Value.Date;
+                string text = new TextRange(TextOfNewEvent.Document.ContentStart,
+                              TextOfNewEvent.Document.ContentEnd).Text;
+                Plan addPlan = new Plan(date, text, false);
+                MessageBox.Show("Подія успішно додана до бази данних!");
+                this.Close();
+            }
+            catch(InvalidOperationException)
+            {
+                MessageBox.Show("Дату введено неправильно!");
+            }
+            
         }
     }
 }
