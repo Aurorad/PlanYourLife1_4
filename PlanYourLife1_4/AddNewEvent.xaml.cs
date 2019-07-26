@@ -23,5 +23,12 @@ namespace PlanYourLife1_4
         {
             InitializeComponent();
         }
+        private void SaveBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //MessageBox.Show("Here we should save new event to the database!");
+            DateTime date = Convert.ToDateTime(this.DateOfNewEvent.DataContext);
+            string text = this.TextOfNewEvent.ToString();
+            MessageBox.Show("Date: " + date.ToString() + "\nText: " + text);
+        }
     }
 }

@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PlanYourLife1_4"
         mc:Ignorable="d"
-        Title="AddNewEvent" Height="450" Width="800">
-    <Grid>
-        
+        Title="AddNewEvent" Height="450" Width="512.957" FontFamily="Times New Roman" FontSize="18" Background="#FFFBBFBF" FontWeight="Bold">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="128"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="0" Grid.Row="0"  Content="Дата: " HorizontalAlignment="Center" VerticalAlignment="Center" Height="31" Margin="31,37,41,37" Width="56" />
+        <DatePicker Name="DateOfNewEvent" Grid.Column="1" Grid.Row="0"  HorizontalAlignment="Center" VerticalAlignment="Center" Height="29" Margin="117,38,126,38" Width="134" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Grid.Row="1" Grid.Column="0" Content="Подія:" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="31" Margin="10,89" Width="108"/>
+        <RichTextBox Name="TextOfNewEvent" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="189" Margin="10" Width="357"/>
+        <Button Grid.Row="3" Grid.Column="1" Content="Зберегти" Margin="68,34,209,41" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="30" Panel.ZIndex="7" Click="SaveBtn_Click"/>
     </Grid>
 </Window>

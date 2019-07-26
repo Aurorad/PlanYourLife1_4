@@ -28,7 +28,9 @@ namespace PlanYourLife1_4
         }
         private void MenuItemAdd_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("JDLjf");
+            MessageBox.Show("Your want to create new event!");
+            AddNewEvent addNewEventWindow = new AddNewEvent();
+            addNewEventWindow.Show();
         }
     }
 }
