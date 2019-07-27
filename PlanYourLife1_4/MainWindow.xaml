@@ -11,7 +11,7 @@
         <DataGrid Name="DataGridPlanYourLife" AutoGenerateColumns="False" IsReadOnly="True" Margin="0,24,0,0">
 
             <DataGrid.Columns>
-                <DataGridTemplateColumn Header="Date">
+                <DataGridTemplateColumn Header="Дата">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <DatePicker SelectedDate="{Binding date}" BorderThickness="0"/>
@@ -19,8 +19,10 @@
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
-                <DataGridTextColumn Header="Text" Binding="{Binding text}"/>
-                <DataGridCheckBoxColumn Header="Check" Binding="{Binding implementation}"/>
+                <DataGridTextColumn Header="Подія" Binding="{Binding text}"/>
+                <DataGridCheckBoxColumn Header="Виконання" Binding="{Binding implementation}"  IsReadOnly="False"/>
+            
+
 
             </DataGrid.Columns>
 

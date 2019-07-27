@@ -32,11 +32,17 @@ namespace PlanYourLife1_4
                               TextOfNewEvent.Document.ContentEnd).Text;
                 Plan addPlan = new Plan(date, text, false);
                 MessageBox.Show("Подія успішно додана до бази данних!");
-                this.Close();
+                
             }
             catch(InvalidOperationException)
             {
                 MessageBox.Show("Дату введено неправильно!");
+            }
+            finally
+            {
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
+                this.Close();
             }
             
         }
