@@ -8,10 +8,15 @@
         Title="MainWindow" Height="450" Width="800" FontFamily="Times New Roman" FontSize="14" Foreground="#FFFB9898">
 
     <Grid Margin="10">
-        <DataGrid Name="DataGridPlanYourLife" AutoGenerateColumns="False" IsReadOnly="True" Margin="0,24,0,0">
+        <DataGrid Name="DataGridPlanYourLife" AutoGenerateColumns="False"  Margin="0,24,0,0">
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Show information" Click="ContextMenu_Click" />
+                </ContextMenu>
+            </DataGrid.ContextMenu>
 
             <DataGrid.Columns>
-                <DataGridTemplateColumn Header="Дата">
+                <DataGridTemplateColumn Header="Дата"  IsReadOnly="True">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <DatePicker SelectedDate="{Binding date}" BorderThickness="0"/>
@@ -19,9 +24,15 @@
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
-                <DataGridTextColumn Header="Подія" Binding="{Binding text}"/>
-                <DataGridCheckBoxColumn Header="Виконання" Binding="{Binding implementation}"  IsReadOnly="False"/>
-            
+                <DataGridTextColumn Header="Подія" Binding="{Binding text}" IsReadOnly="True"/>
+                <DataGridCheckBoxColumn Header="Виконання" Binding="{Binding implementation}"  IsReadOnly="False">
+                    <DataGridCheckBoxColumn.CellStyle>
+                        <Style>
+                            <EventSetter Event="CheckBox.Checked" Handler="OnChecked"/>
+                        </Style>
+                    </DataGridCheckBoxColumn.CellStyle>
+                </DataGridCheckBoxColumn>
+
 
 
             </DataGrid.Columns>

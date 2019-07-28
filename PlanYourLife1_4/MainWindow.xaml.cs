@@ -37,5 +37,14 @@ namespace PlanYourLife1_4
             Plans updataPlans = new Plans();
             this.DataGridPlanYourLife.ItemsSource = updataPlans.plans;
         }
+        private void OnChecked (object sender, RoutedEventArgs e)
+        {
+            
+           
+        }
+        private void ContextMenu_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
