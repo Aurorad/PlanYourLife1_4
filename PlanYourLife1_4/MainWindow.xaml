@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PlanYourLife1_4"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" FontFamily="Times New Roman" FontSize="14" Foreground="#FFFB9898">
+        Title="MainWindow" Height="450" Width="536" FontFamily="Times New Roman" FontSize="14" Foreground="#FFFB9898">
 
     <Grid Margin="10">
-        <DataGrid Name="DataGridPlanYourLife" AutoGenerateColumns="False"  Margin="0,24,0,0">
-            <DataGrid.ContextMenu>
+        <DataGrid Name="DataGridPlanYourLife" AutoGenerateColumns="False"  Margin="0,24,0,0" MouseDoubleClick="ShowInformation">
+            <!--<DataGrid.ContextMenu>
                 <ContextMenu>
-                    <MenuItem Header="Show information" Click="ContextMenu_Click" />
+                    <MenuItem Header="Show information" Click="ContextMenuShowInformation" />
                 </ContextMenu>
-            </DataGrid.ContextMenu>
+            </DataGrid.ContextMenu>-->
 
             <DataGrid.Columns>
                 <DataGridTemplateColumn Header="Дата"  IsReadOnly="True">
@@ -25,12 +25,12 @@
                 </DataGridTemplateColumn>
 
                 <DataGridTextColumn Header="Подія" Binding="{Binding text}" IsReadOnly="True"/>
-                <DataGridCheckBoxColumn Header="Виконання" Binding="{Binding implementation}"  IsReadOnly="False">
-                    <DataGridCheckBoxColumn.CellStyle>
+                <DataGridCheckBoxColumn Header="Виконання" Binding="{Binding implementation}"  IsReadOnly="True">
+                    <!--<DataGridCheckBoxColumn.CellStyle>
                         <Style>
                             <EventSetter Event="CheckBox.Checked" Handler="OnChecked"/>
                         </Style>
-                    </DataGridCheckBoxColumn.CellStyle>
+                    </DataGridCheckBoxColumn.CellStyle>-->
                 </DataGridCheckBoxColumn>
 
 

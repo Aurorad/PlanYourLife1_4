@@ -37,14 +37,33 @@ namespace PlanYourLife1_4
             Plans updataPlans = new Plans();
             this.DataGridPlanYourLife.ItemsSource = updataPlans.plans;
         }
-        private void OnChecked (object sender, RoutedEventArgs e)
+        //private void OnChecked (object sender, RoutedEventArgs e)
+        //{
+        //    DataGrid planData = (DataGrid)sender;
+        //    if (planData.SelectedCells.Count == 0)
+        //    {
+        //        MessageBox.Show("Потрібно вибрати рядок");
+        //        return;
+        //    }
+        //    Plan plan = (Plan)planData.SelectedCells[0].Item;
+        //    MessageBox.Show(plan.text);
+
+        //}
+        private void ShowInformation(object sender, RoutedEventArgs e)
         {
-            
-           
-        }
-        private void ContextMenu_Click(object sender, RoutedEventArgs e)
-        {
-            
+            DataGrid planData = (DataGrid)sender;
+            if (planData.SelectedCells.Count == 0)
+            {
+                MessageBox.Show("Потрібно вибрати рядок");
+                return;
+            }
+            Plan plan = (Plan)planData.SelectedCells[0].Item;
+            //MessageBox.Show("Выбрано наступний елемент:" + Environment.NewLine +
+            //                $"id = {plan.id};" + Environment.NewLine +
+            //                $"text = {plan.text};");
+            ShowPlanWindow showPlanWindow = new ShowPlanWindow(plan);
+            showPlanWindow.Show();
+
         }
     }
 }

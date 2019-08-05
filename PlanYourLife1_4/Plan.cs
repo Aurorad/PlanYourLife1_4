@@ -3,7 +3,7 @@ using MySql.Data.MySqlClient;
 
 namespace PlanYourLife1_4
 {
-    class Plan
+     class Plan
     {
         public int id { set; get; }
         public DateTime date { set; get; }
