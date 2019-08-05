@@ -63,7 +63,7 @@ namespace PlanYourLife1_4
             //                $"text = {plan.text};");
             ShowPlanWindow showPlanWindow = new ShowPlanWindow(plan);
             showPlanWindow.Show();
-
+            this.Close();
         }
     }
 }

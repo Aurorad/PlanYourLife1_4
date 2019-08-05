@@ -91,10 +91,20 @@ namespace PlanYourLife1_4
             command.ExecuteNonQuery();
             connection.Close();
         }
+        //public static void ChangePlan(int id, DateTime newDate, string newText, bool newImplementation)
+        //{
+        //    string DateStr = newDate.ToString("yyyy-MM-dd hh:mm:ss");
+        //    string commandStr = "";
+
+        //}
+        
         public void ChangeImplamentation()
         {
-            bool newImplemetation = !this.implementation;
-            string commandStr = "UPDATE plans SET Implementation='" + newImplemetation + "' WHERE Id='" + this.id + "'";
+            bool Implemetation = !this.implementation;
+            int newImplementation;
+            if (Implemetation) newImplementation = 1;
+            else newImplementation = 0;
+            string commandStr = "UPDATE plans SET Implementation='" + newImplementation + "' WHERE Id='" + this.id + "'";
             MySqlConnection connection = Plans.Connection();
             connection.Open();
             MySqlCommand command = new MySqlCommand(commandStr, connection);
