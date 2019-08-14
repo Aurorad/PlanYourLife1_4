@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PlanYourLife1_4"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="536" FontFamily="Times New Roman" FontSize="14" Foreground="#FFFB9898">
+        Title="MainWindow" Height="450" Width="536" FontFamily="Times New Roman" FontSize="14" Foreground="#FFFB9898" MinWidth="700" MinHeight="500" Background="#FFF79595">
 
     <Grid Margin="10">
-        <DataGrid Name="DataGridPlanYourLife" AutoGenerateColumns="False"  Margin="0,24,0,0" MouseDoubleClick="ShowInformation">
+        <DataGrid Name="DataGridPlanYourLife" AutoGenerateColumns="False"  Margin="0,24,0,0" MouseDoubleClick="ShowInformation" Background="#FF99ECCE" BorderBrush="#FF629ED8" Foreground="Black">
             <!--<DataGrid.ContextMenu>
                 <ContextMenu>
                     <MenuItem Header="Show information" Click="ContextMenuShowInformation" />

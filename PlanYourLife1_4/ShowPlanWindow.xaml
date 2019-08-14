@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PlanYourLife1_4"
         mc:Ignorable="d"
-        Title="ShowPlanWindow" Height="448" Width="450" WindowStyle="ToolWindow" FontFamily="Times New Roman" FontSize="16">
+        Title="ShowPlanWindow" Height="448" Width="450" WindowStyle="ToolWindow" FontFamily="Times New Roman" FontSize="16" Background="#FFF59696">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="36*"/>

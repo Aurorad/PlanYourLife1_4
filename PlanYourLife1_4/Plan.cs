@@ -40,7 +40,15 @@ namespace PlanYourLife1_4
             int Id=1;
             while (reader.Read())
             {
-                Id += Convert.ToInt32(reader[0]);
+                try
+                {
+                    Id += Convert.ToInt32(reader[0]);
+                }
+                catch (Exception)
+                {
+                    Id = 1;
+                }
+                
             }
             
             connection.Close();
